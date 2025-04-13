@@ -1,0 +1,114 @@
+
+/* Note actions styling */
+.notes-item {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notes-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.notes-item-selected {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.notes-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.notes-item-actions {
+  display: flex;
+  gap: 8px;
+  opacity: 1; /* Changed from 0.8 to make actions more visible */
+}
+
+/* Remove hover opacity change to ensure actions are always visible */
+.notes-action-btn {
+  padding: 6px; /* Increased padding for better touch target */
+  border-radius: 4px;
+  color: hsl(var(--notes-dark-text));
+  background-color: rgba(0, 0, 0, 0.03); /* Added light background */
+  transition: all 0.2s ease;
+}
+
+.notes-action-btn:hover {
+  background-color: rgba(0, 0, 0, 0.08); /* Darker on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.notes-delete-btn:hover {
+  color: hsl(var(--destructive));
+}
+
+.notes-item-edit {
+  margin-top: 8px;
+}
+
+.notes-edit-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  border: 1px solid hsl(var(--notes-border));
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.notes-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.notes-edit-cancel {
+  color: hsl(var(--destructive));
+}
+
+.notes-edit-save {
+  color: hsl(var(--notes-accent));
+}
+
+/* Group delete button styling */
+.notes-group-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.group-delete-btn {
+  position: absolute;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  opacity: 0.7; /* Increased from 0 for better visibility */
+  color: hsl(var(--notes-dark-text));
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notes-group-item:hover .group-delete-btn {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.group-delete-btn:hover {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: hsl(var(--destructive));
+}
